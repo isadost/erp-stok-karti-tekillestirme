@@ -11,7 +11,12 @@ ERP sistemlerinde duplicate stok kartlarının tespit edilmesi.
 - Cosine Similarity
 
 ## UML Diyagramları
-docs/uml klasörü içerisinde bulunmaktadır.
+Sistem tasarım diyagramları docs/uml klasörü içerisinde bulunmaktadır.
 
+- Use Case Diagram
+- Activity Diagram
+- Class Diagram
+- Component Diagram
+- Sequence Diagram
 ## Çalıştırma
 pip install -r requirements.txt
