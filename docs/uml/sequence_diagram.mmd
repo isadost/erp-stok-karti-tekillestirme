@@ -1,1 +1,20 @@
+sequenceDiagram
+    actor Kullanici as Kullanıcı
+    participant NB as Jupyter Notebook
+    participant DL as DataLoader
+    participant PP as Preprocessor
+    participant SA as SimilarityAnalyzer
+    participant DD as DuplicateDetector
+    participant OUT as CSV Output
 
+    Kullanici->>NB: Analizi başlatır
+    NB->>DL: data.xlsx dosyasını oku
+    DL-->>NB: DataFrame döndürür
+    NB->>PP: Metinleri temizle ve normalize et
+    PP-->>NB: Temiz veri döndürür
+    NB->>SA: TF-IDF ve cosine similarity hesapla
+    SA-->>NB: Benzerlik matrisi döndürür
+    NB->>DD: Threshold ile duplicate adaylarını belirle
+    DD-->>NB: Benzer stok çiftleri döndürür
+    NB->>OUT: benzer_stok_kartlari.csv kaydet
+    OUT-->>Kullanici: Sonuç dosyası oluşur
