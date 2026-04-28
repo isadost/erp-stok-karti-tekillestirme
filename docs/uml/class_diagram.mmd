@@ -1,1 +1,46 @@
 
+classDiagram
+    class StockItem {
+        +string stokKodu
+        +string stokAdi
+        +string yalinHali
+        +int kodUzunlugu
+    }
+
+    class DataLoader {
+        +readExcel(filePath)
+        +readCsv(filePath)
+        +getDataFrame()
+    }
+
+    class Preprocessor {
+        +normalizeText(text)
+        +removeSpaces(text)
+        +toUpperCase(text)
+        +cleanData(data)
+    }
+
+    class SimilarityAnalyzer {
+        +vectorize(texts)
+        +calculateCosineSimilarity()
+        +getSimilarItems(index, topN)
+    }
+
+    class DuplicateDetector {
+        +float threshold
+        +detectDuplicates(similarityMatrix)
+        +exportResults(filePath)
+    }
+
+    class EvaluationService {
+        +calculatePrecision()
+        +calculateRecall()
+        +calculateF1Score()
+        +calculateAccuracy()
+    }
+
+    DataLoader --> StockItem
+    Preprocessor --> StockItem
+    SimilarityAnalyzer --> Preprocessor
+    DuplicateDetector --> SimilarityAnalyzer
+    EvaluationService --> DuplicateDetector
