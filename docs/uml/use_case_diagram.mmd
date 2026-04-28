@@ -1,1 +1,31 @@
+flowchart LR
+    A[Satın Alma Personeli]
+    B[Mal Kabul Personeli]
+    C[Satış Personeli]
+    D[Sistem Yöneticisi]
 
+    S[ERP Stok Kartı Tekilleştirme Karar Destek Sistemi]
+
+    UC1[Stok verisini yükleme]
+    UC2[Veri ön işleme]
+    UC3[Benzer stok kartlarını tespit etme]
+    UC4[Duplicate kayıtları listeleme]
+    UC5[Doğru stok kartı önerisi alma]
+    UC6[Sonuçları CSV olarak dışa aktarma]
+    UC7[Model performansını değerlendirme]
+
+    D --> UC1
+    D --> UC2
+    A --> UC3
+    B --> UC4
+    C --> UC5
+    D --> UC6
+    D --> UC7
+
+    UC1 --> S
+    UC2 --> S
+    UC3 --> S
+    UC4 --> S
+    UC5 --> S
+    UC6 --> S
+    UC7 --> S
