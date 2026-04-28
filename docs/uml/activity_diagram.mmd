@@ -1,1 +1,17 @@
 
+flowchart TD
+    A([Başla]) --> B[ERP / Excel verisini oku]
+    B --> C[Kolonları ve eksik verileri kontrol et]
+    C --> D{Eksik veri var mı?}
+    D -- Evet --> E[Eksik veriyi temizle veya çıkar]
+    D -- Hayır --> F[Metinleri normalize et]
+    E --> F
+    F --> G[YALIN HALİ kolonunu analiz girdisi seç]
+    G --> H[TF-IDF vektörleştirme uygula]
+    H --> I[Cosine similarity hesapla]
+    I --> J[Threshold değeri belirle]
+    J --> K[Benzer stok çiftlerini çıkar]
+    K --> L[Duplicate adaylarını listele]
+    L --> M[Sonuçları CSV olarak kaydet]
+    M --> N[Precision, Recall, F1 hesapla]
+    N --> O([Bitir])
