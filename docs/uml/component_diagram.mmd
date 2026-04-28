@@ -1,1 +1,12 @@
 
+flowchart LR
+    A[(Oracle / Excel Veri Kaynağı)] --> B[Data Loader]
+    B --> C[Preprocessing Module]
+    C --> D[TF-IDF Vectorizer]
+    D --> E[Similarity Engine]
+    E --> F[Duplicate Detection Module]
+    F --> G[Decision Support Output]
+    G --> H[(CSV Sonuç Dosyası)]
+
+    I[Evaluation Module] --> F
+    I --> J[Precision / Recall / F1 Raporu]
