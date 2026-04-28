@@ -18,5 +18,11 @@ Sistem tasarım diyagramları docs/uml klasörü içerisinde bulunmaktadır.
 - Class Diagram
 - Component Diagram
 - Sequence Diagram
+## Performans Metrikleri
+
+- Precision
+- Recall
+- F1-Score
+- Accuracy
 ## Çalıştırma
 pip install -r requirements.txt
