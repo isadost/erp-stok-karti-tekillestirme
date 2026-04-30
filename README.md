@@ -26,3 +26,18 @@ Sistem tasarım diyagramları docs/uml klasörü içerisinde bulunmaktadır.
 - Accuracy
 ## Çalıştırma
 pip install -r requirements.txt
+## API Katmanı ve Uyarı Sistemi
+
+Projeye FastAPI tabanlı bir servis katmanı eklenmiştir.
+
+### Çalıştırma
+
+```bash
+py -m uvicorn src.api:app --reload
+```
+
+### Swagger Test Ekranı
+
+```text
+http://127.0.0.1:8000/docs
+```
