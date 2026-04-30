@@ -26,7 +26,7 @@ def load_data():
 df = load_data()
 
 vectorizer = TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5))
-tfidf_matrix = vectorizer.fit_transform(df["YALIN HALİ"].fillna("").astype(str))
+tfidf_matrix = vectorizer.fit_transform(df["STOK ADI"].fillna("").astype(str))
 
 @app.get("/")
 def home():
