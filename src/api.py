@@ -97,4 +97,3 @@ def uyari_raporu():
         "uyari_sayisi": len(warnings),
         "uyarilar": warnings[:100]
     }
-
