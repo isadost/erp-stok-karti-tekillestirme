@@ -9,8 +9,9 @@ app = FastAPI(
     description="ERP stok kartları için benzerlik kontrolü ve duplicate uyarı servisi",
     version="1.0.0"
 )
-
-DATA_PATH = "data.xlsx"
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "data.xlsx"
 THRESHOLD = 0.90
 
 class StokRequest(BaseModel):
