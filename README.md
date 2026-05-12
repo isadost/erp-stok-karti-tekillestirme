@@ -7,6 +7,7 @@ ERP sistemlerinde duplicate stok kartlarının tespit edilmesi.
 - Python
 - Pandas
 - Scikit-learn
+- Notebook
 - TF-IDF
 - Cosine Similarity
 
